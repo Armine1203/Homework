@@ -1,4 +1,4 @@
-public class Problem2 {
+public class DoubleNumbersSum {
     public static void main(String[] args) {
         double double1 = 123.6;
         double double2 = 27.5;
@@ -16,7 +16,7 @@ public class Problem2 {
         System.out.println(tenthPart);
 
         //3
-        int sumOfIntegersParts = (int)double1 + (int)double2 + (int)double3;
+        int sumOfIntegersParts = (int) double1 + (int) double2 + (int) double3;
         System.out.println(sumOfIntegersParts);
     }
 }
