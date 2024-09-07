@@ -1,3 +1,5 @@
+package HW2;
+
 public class DoubleNumbersSum {
     public static void main(String[] args) {
         double double1 = 123.6;
