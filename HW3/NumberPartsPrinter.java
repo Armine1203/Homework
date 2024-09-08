@@ -30,6 +30,7 @@ public class NumberPartsPrinter {
             System.out.println("unit part is " + unitPart);
         }else {
             System.out.println("Invalid data. Please try again!");
+            System.exit(0);
         }
 
     }

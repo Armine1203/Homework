@@ -16,25 +16,22 @@ public class AmountOfMoneySpent {
         int orderAmount;
         int totalAmountSpent;
 
-        if (isVipClient == false && minage >= 16) {
-            System.out.println("Enter your order amount");
-            orderAmount = scanner.nextInt();
-            totalAmountSpent = entryAmount + orderAmount;
-            System.out.println("Your total amount spent is "+ totalAmountSpent);
+        if (minage >= 16) {
+            if (isVipClient == false) {
+                System.out.println("Enter your order amount");
+                orderAmount = scanner.nextInt();
+                totalAmountSpent = entryAmount + orderAmount;
+                System.out.println("Your total amount spent is " + totalAmountSpent);
 
-        } else if (isVipClient == false && minage < 16) {
+            } else {
+                System.out.println("Enter your order amount");
+                orderAmount = scanner.nextInt();
+                totalAmountSpent = orderAmount - (orderAmount * 15 / 100);
+                System.out.println("Your total amount spent is " + totalAmountSpent);
+            }
+        } else {
             System.out.println("Sorry! Bye!");
             System.exit(0);
-
-        } else if (isVipClient == true && minage < 16) {
-            System.out.println("Sorry! Bye");
-            System.exit(0);
-
-        } else if (isVipClient == true && minage >= 16) {
-            System.out.println("Enter your order amount");
-            orderAmount = scanner.nextInt();
-            totalAmountSpent = orderAmount - (orderAmount * 15 / 100);
-            System.out.println("Your total amount spent is "+totalAmountSpent);
         }
 
     }

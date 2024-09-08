@@ -36,6 +36,7 @@ public class ArithmeticMeanOfNumbers {
             System.out.println("result = " + "sumOfAbsoluteValues " + "/" + " arithmeticMean" + " = " + result);
         } else {
             System.out.println("the number is not divisible by 0");
+            System.exit(1);
         }
     }
 }
