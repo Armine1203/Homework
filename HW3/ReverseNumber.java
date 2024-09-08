@@ -21,9 +21,12 @@ public class ReverseNumber {
                 System.out.println("reverseNum is " + reverseNum);
             } else {
                 System.out.println("Incorrect reverse number example");
+                System.exit(0);
             }
-        }else {
+
+        } else {
             System.out.println("Enter a number between 100 and 999");
+            System.exit(0);
         }
 
     }

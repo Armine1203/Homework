@@ -12,20 +12,18 @@ public class AmountOfMoneySpent {
         System.out.println("Enter your age");
         int minage = scanner.nextInt();
 
+        System.out.println("Enter your order amount");
+        int orderAmount = scanner.nextInt();
+
         int entryAmount = 5000;
-        int orderAmount;
         int totalAmountSpent;
 
         if (minage >= 16) {
             if (isVipClient == false) {
-                System.out.println("Enter your order amount");
-                orderAmount = scanner.nextInt();
                 totalAmountSpent = entryAmount + orderAmount;
                 System.out.println("Your total amount spent is " + totalAmountSpent);
 
             } else {
-                System.out.println("Enter your order amount");
-                orderAmount = scanner.nextInt();
                 totalAmountSpent = orderAmount - (orderAmount * 15 / 100);
                 System.out.println("Your total amount spent is " + totalAmountSpent);
             }
