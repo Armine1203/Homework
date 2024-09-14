@@ -15,9 +15,10 @@ public class ArraysInitalizationMaxMin {
         System.out.println("Enter array's length");
         int n = scanner.nextInt();
 
-        if (n > 0 && n <= 8) {
+        if (n < 0 || n > 8) {
+            System.exit(0);
+        } else {
             int[] array = new int[n];
-
             System.out.println("Enter number 1");
             int a = scanner.nextInt();
 
@@ -29,9 +30,6 @@ public class ArraysInitalizationMaxMin {
 
             System.out.println(array[array.length / 2 - 1]);
             System.out.println(array[array.length / 2 + 1]);
-
-        } else {
-            System.exit(0);
         }
     }
 }

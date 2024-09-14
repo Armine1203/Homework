@@ -9,23 +9,24 @@ package HW4;
 
 public class SecondArrayFilteringByNegativeNumbers {
     public static void main(String[] args) {
-        double[] array1 = {10.5, 7.8, 2.3, 3, 8};
+        double[] array1 = {10.5, 7.8, 2.3, -3, -8};
         double[] array2 = new double[5];
 
+        int index = 0;
         if (array1[0] > 0) {
-            array2[array2.length - 1] = array1[0];
+            array2[array2.length - 1 - index++] = array1[0];
         }
         if (array1[1] > 0) {
-            array2[array2.length - 1 - 1] = array1[1];
+            array2[array2.length - 1 - index++] = array1[1];
         }
         if (array1[2] > 0) {
-            array2[array2.length - 1 - 2] = array1[2];
+            array2[array2.length - 1 - index++] = array1[2];
         }
         if (array1[3] > 0) {
-            array2[array2.length - 1 - 3] = array1[3];
+            array2[array2.length - 1 - index++] = array1[3];
         }
         if (array1[4] > 0) {
-            array2[array2.length - 1 - 4] = array1[4];
+            array2[array2.length - 1 - index] = array1[4];
         }
 
         System.out.println("Array: " + array2[0] + ", " + array2[1] + ", " + array2[2] + ", " + array2[3] + ", " + array2[4]);

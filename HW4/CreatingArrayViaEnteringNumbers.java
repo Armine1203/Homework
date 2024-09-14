@@ -17,17 +17,14 @@ public class CreatingArrayViaEnteringNumbers {
         int number = scanner.nextInt();
         int[] array;
 
-
-        if (number > 0) {
+        if (number <= 0) {
+            System.exit(0);
+        }else {
             switch (number) {
                 case 3:
-                    array = new int[3];
-                    break;
                 case 4:
-                    array = new int[4];
-                    break;
                 case 5:
-                    array = new int[5];
+                    array = new int[number];
                     break;
                 case 6:
                 case 7:
@@ -37,8 +34,6 @@ public class CreatingArrayViaEnteringNumbers {
                     array = new int[15];
                     array[0] = 15;
             }
-        }else {
-            System.exit(0);
         }
 
 

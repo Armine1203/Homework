@@ -11,13 +11,14 @@ public class ArrayValueByEnteringNumbers {
         System.out.println("Enter index");
         int a = scanner.nextInt();
 
-        if (n > 0 && a >= 0 && n - a > 3) {
+        if (n <= 0 || a < 0 || n - a <= 3) {
+            System.exit(0);
+
+        } else {
             array = new int[n];
             array[a + 1] = a + 1;
             array[a + 2] = a + 2;
             array[a + 3] = a + 3;
-        } else {
-            System.exit(0);
         }
 
 
