@@ -8,7 +8,7 @@ package HW6;
 
 import java.util.Scanner;
 //ԿԻՍԱՏՏՏՏՏՏՏՏՏՏՏ
-public class P3 {
+public class FirstArrayIncludeSecond {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
