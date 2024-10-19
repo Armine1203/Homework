@@ -1,11 +1,12 @@
 package hw9_Classes;
 
 public class Home {
-    double livingRoom;
-    double bedroom;
-    double kitchen;
-    double bathroom;
-    double hallWay;
+
+    private double livingRoom;
+    private double bedroom;
+    private double kitchen;
+    private double bathroom;
+    private double hallWay;
 
     public Home(double livingRoom, double bedroom, double kitchen, double bathroom, double hallWay) {
         if (livingRoom <= 0 || bedroom <= 0 || kitchen <= 0 || bathroom <= 0 || hallWay <= 0){
