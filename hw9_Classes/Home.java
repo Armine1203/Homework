@@ -1,6 +1,7 @@
 package hw9_Classes;
 
 public class Home {
+
     private double livingRoom;
     private double bedroom;
     private double kitchen;
