@@ -13,7 +13,7 @@ public class LightDemo {
         remoteControl.changeBrightness(50);
         System.out.println(smartLight1.getBrightness());
 
-        remoteControl.resetLight(smartLight2);
+        remoteControl.resetLight();
         System.out.println(smartLight2.isOn() + " " + smartLight2.getBrightness() + " " + smartLight2.getColor());
 
         SmartLight smartLight3 = remoteControl.getLightStatus();

@@ -22,7 +22,7 @@ public class SmartLight {
             this.brightness = brightness;
         } else {
             System.out.println("Invalid brightness value. Please enter again!");
-            System.exit(0);
+            System.exit(3);
         }
     }
 

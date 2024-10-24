@@ -7,10 +7,10 @@ public class RemoteControl{
     public RemoteControl(SmartLight smartLight){
         this.smartLight = smartLight;
     }
-     public void resetLight(SmartLight smartLight1){
-         smartLight1.setOn(false);
-         smartLight1.setBrightness(50);
-         smartLight1.setColor("White");
+     public void resetLight(){
+         smartLight.setOn(false);
+         smartLight.setBrightness(50);
+         smartLight.setColor("White");
      }
 
      public SmartLight getLightStatus(){
