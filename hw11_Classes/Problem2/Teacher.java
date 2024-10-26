@@ -12,7 +12,10 @@ public class Teacher {
     private double salary;
 
     static {
-        minBaseSalary = k * minSalary;
+        setK(0.5);
+        setMinSalary(25000);
+        minBaseSalary = getK() * getMinSalary();
+        System.out.println("Min base salary = "+ minBaseSalary);
     }
 
     public Teacher(String fullName, int age, String subject, double wCoff) {
@@ -48,12 +51,17 @@ public class Teacher {
         this.age = age;
     }
 
-    public double getK() {
+    public static double getK() {
         return k;
     }
 
     public static void setK(double k) {
-        Teacher.k = k;
+        if (k > 1 || k < 0) {
+            System.out.println("The coefficient k cannot be greater than 1 and less than 0");
+            System.exit(5);
+        } else {
+            Teacher.k = k;
+        }
     }
 
     public double getSalary() {
@@ -87,13 +95,11 @@ public class Teacher {
 
     public void setwCoefficient(double wCoefficient) {
         if (wCoefficient > 1 || wCoefficient < 0) {
-            System.out.println("The w cofficient cannot be less than 1");
+            System.out.println("The coefficient w cannot be greater than 1 and less than 0");
             System.exit(5);
         } else {
             this.wCoefficient = wCoefficient;
         }
-
-
     }
 }
 

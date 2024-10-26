@@ -10,8 +10,8 @@ public class ComputerDemo {
         System.out.println(computer.getMemory());
         System.out.println(computer.getRam());
 
-        System.out.println(Computer.generateMegaComputer(1500,10000).getRam());
-        System.out.println(Computer.generateMegaComputer(1500,10000).getMemory());
-
+        Computer computer2 = Computer.generateMegaComputer(1500,300000);
+        System.out.println(computer2.getMemory());
+        System.out.println(computer2.getRam());
     }
 }
