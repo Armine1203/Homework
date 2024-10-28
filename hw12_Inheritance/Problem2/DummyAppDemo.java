@@ -14,6 +14,7 @@ public class DummyAppDemo {
         String[] videoCallMembers = {"Aram", "Ani", "Karen", "Mariam"};
         DummyAppPro dummyAppProCall = new DummyAppPro(videoCallMembers);
         dummyAppProCall.makeCall();
+        System.out.println("-----------");
         dummyAppProCall.answerCall();
         System.out.println("video call status is" + dummyAppProCall.isVideoCallEnabled());
         dummyAppProCall.toggleCamera();

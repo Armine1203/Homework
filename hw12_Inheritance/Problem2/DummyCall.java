@@ -16,7 +16,11 @@ public class DummyCall {
         this.listOfCallMembers = listOfCallMembers;
     }
     public void makeCall(){
-        System.out.println("Call started with " +getListOfCallMembers());
+
+        System.out.println("Call started between");
+    for(String callMembers : getListOfCallMembers()){
+        System.out.println(callMembers);
+    }
     }
     public void answerCall(){
         System.out.println("Call answered");

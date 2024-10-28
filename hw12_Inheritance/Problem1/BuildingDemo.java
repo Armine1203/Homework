@@ -30,7 +30,7 @@ public class BuildingDemo {
         Doctor doctor2 = new Doctor("Ani2","Arshakyan2",32,"Neuropathologist2");
         hospital.setStaff(doctor);
         hospital.setStaff(doctor1);
-        hospital.setStaff(doctor2);
+        //hospital.setStaff(doctor2);
         //hospital.setStaff(doctor2);
         hospital.removeStaffMember("Ani");
 
