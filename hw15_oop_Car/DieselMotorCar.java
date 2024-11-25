@@ -12,10 +12,7 @@ public class DieselMotorCar extends Car implements GasPowered{
 
     }
 
-    @Override
-    public boolean isInGas() {
-        return super.inGas;
-    }
+
     @Override
     public void startDriving() {
         if (inGas){
