@@ -9,8 +9,6 @@ public class HeatingSystem {
        this.boiler = boiler;
    }
 
-
-   //*
     public double calculateMonthlyHeatingCost(int month) {
         double gasCost = boiler.calculateMonthlyGasCost(month, building.area);
         double electricityCost = boiler.calculateMonthlyElectricityCost(month, building.area);
