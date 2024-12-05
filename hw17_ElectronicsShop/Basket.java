@@ -24,6 +24,7 @@ public class Basket {
         for (int i = 0; i < items.length ; i++) {
             newItems[i]  = items [i];
         }
+        items = newItems;
     }
 
     public double calculateTotalPrice(){
@@ -34,7 +35,7 @@ public class Basket {
         return totalPrice;
     }
 
-    public void checkout(double cardBalance) throws RuntimeException{
+    public void checkout(double cardBalance) throws ExceptionForElectronicStore{
         giftCount = 0;
         for (int i = 0; i <itemCount ; i++) {
             if (items[i].getGift() != null){
@@ -42,11 +43,11 @@ public class Basket {
             }
 
         }
-        if (giftCount > 1) throw new RuntimeException(" Please remove a gift. Gift count more than 1");
+        if (giftCount > 1) throw new ExceptionForElectronicStore(" Please remove a gift. Gift count more than 1");
         double totalPrice = calculateTotalPrice();
         System.out.println("totalPrice = "+totalPrice);
         if (cardBalance < totalPrice) {
-            throw new RuntimeException("Insufficient funds");
+            throw new ExceptionForElectronicStore("Insufficient funds");
         }
     }
 

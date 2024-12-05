@@ -1,12 +1,17 @@
 package hw17_ElectronicsShop;
 
-public class Item {
+public enum Item {
+   LAPTOP("1", "Laptop", 150_000),
+    PHONE("2", "Phone", 100_000),
+    TV("3", "TV", 200_000),
+    HAIRDRYER("4", "Hair Dryer", 30_000) ;
+
     private String id;
     private String name;
     private double price;
     private Item gift;
 
-    public Item(String id, String name, double price) {
+    private Item(String id, String name, double price) {//դեֆոլտ փրայվիթ է//
         this.setId(id);
         this.setName(name);
         this.setPrice(price);
@@ -45,6 +50,12 @@ public class Item {
     }
     public void removeGift(){
         this.setGift(null);
+    }
+
+    public void isAgreeToReceiveGift(Item item, Item gift, String answer){
+        if (answer.toLowerCase().equals("yes")){
+            item.setGift(gift);
+        }
     }
     @Override
     public String toString() {
