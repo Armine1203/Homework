@@ -3,6 +3,8 @@ package hw17_ElectronicsShop;
 public class Basket {
     private Item[] items;
     private int itemCount;
+    private Item gift;
+
     private int giftCount;
 
 
@@ -10,6 +12,7 @@ public class Basket {
     public Basket() {
         this.setItems(new Item[10]);
         itemCount = 0 ;
+        giftCount = 0;
     }
 
     public void addItem(Item item) {
@@ -35,20 +38,30 @@ public class Basket {
         return totalPrice;
     }
 
-    public void checkout(double cardBalance) throws ExceptionForElectronicStore{
-        giftCount = 0;
-        for (int i = 0; i <itemCount ; i++) {
-            if (items[i].getGift() != null){
-                giftCount++;
-            }
+    public Item getGift() {
+        return gift;
+    }
 
+
+    public void checkout(double cardBalance) throws ExceptionForElectronicStore{
+        if (giftCount > 1) {
+            throw new ExceptionForElectronicStore(" Please remove a gift. Gift count more than 1");
         }
-        if (giftCount > 1) throw new ExceptionForElectronicStore(" Please remove a gift. Gift count more than 1");
         double totalPrice = calculateTotalPrice();
         System.out.println("totalPrice = "+totalPrice);
         if (cardBalance < totalPrice) {
             throw new ExceptionForElectronicStore("Insufficient funds");
         }
+        System.out.println("Checkout successful!");
+    }
+    public void removeGift(){
+        this.setGift(null);
+    }
+
+
+    public void setGift(Item gift) {
+        this.gift = gift;
+        giftCount++;
     }
 
     public Item[] getItems() {
@@ -62,4 +75,5 @@ public class Basket {
     public int getGiftCount() {
         return giftCount;
     }
+
 }

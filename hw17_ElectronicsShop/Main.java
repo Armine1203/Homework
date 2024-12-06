@@ -10,8 +10,8 @@ public class Main {
         Item tv = Item.TV;
         Item hairDryer = Item.HAIRDRYER;
 
-        laptop.isAgreeToReceiveGift(laptop, phone, "YES");
-        tv.isAgreeToReceiveGift(laptop, hairDryer, "yEs");
+        customer.isAgreeToReceiveGift(laptop, phone, "YES");
+//        customer.isAgreeToReceiveGift(laptop, hairDryer, "yes");
         customer.addItemToBasket(laptop);
         customer.addItemToBasket(tv);
 

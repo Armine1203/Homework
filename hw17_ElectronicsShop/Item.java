@@ -9,7 +9,6 @@ public enum Item {
     private String id;
     private String name;
     private double price;
-    private Item gift;
 
     private Item(String id, String name, double price) {//դեֆոլտ փրայվիթ է//
         this.setId(id);
@@ -41,29 +40,12 @@ public enum Item {
         this.price = price;
     }
 
-    public Item getGift() {
-        return gift;
-    }
-
-    public void setGift(Item gift) {
-        this.gift = gift;
-    }
-    public void removeGift(){
-        this.setGift(null);
-    }
-
-    public void isAgreeToReceiveGift(Item item, Item gift, String answer){
-        if (answer.toLowerCase().equals("yes")){
-            item.setGift(gift);
-        }
-    }
     @Override
     public String toString() {
         return "Item{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", gift=" + gift +
                 '}';
     }
 }
